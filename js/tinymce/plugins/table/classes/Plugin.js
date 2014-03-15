@@ -613,31 +613,6 @@ define("tinymce/tableplugin/Plugin", [
 			]
 		});
 
-		editor.addMenuItem('tableprops', {
-			text: 'Table properties',
-			context: 'table',
-			onPostRender: postRender,
-			onclick: tableDialog
-		});
-
-		editor.addMenuItem('deletetable', {
-			text: 'Delete table',
-			context: 'table',
-			onPostRender: postRender,
-			cmd: 'mceTableDelete'
-		});
-
-		editor.addMenuItem('cell', {
-			separator: 'before',
-			text: 'Cell',
-			context: 'table',
-			menu: [
-				{text: 'Cell properties', onclick: cmd('mceTableCellProps'), onPostRender: postRenderCell},
-				{text: 'Merge cells', onclick: cmd('mceTableMergeCells'), onPostRender: postRenderCell},
-				{text: 'Split cell', onclick: cmd('mceTableSplitCells'), onPostRender: postRenderCell}
-			]
-		});
-
 		editor.addMenuItem('row', {
 			text: 'Row',
 			context: 'table',
@@ -645,12 +620,6 @@ define("tinymce/tableplugin/Plugin", [
 				{text: 'Insert row before', onclick: cmd('mceTableInsertRowBefore'), onPostRender: postRenderCell},
 				{text: 'Insert row after', onclick: cmd('mceTableInsertRowAfter'), onPostRender: postRenderCell},
 				{text: 'Delete row', onclick: cmd('mceTableDeleteRow'), onPostRender: postRenderCell},
-				{text: 'Row properties', onclick: cmd('mceTableRowProps'), onPostRender: postRenderCell},
-				{text: '-'},
-				{text: 'Cut row', onclick: cmd('mceTableCutRow'), onPostRender: postRenderCell},
-				{text: 'Copy row', onclick: cmd('mceTableCopyRow'), onPostRender: postRenderCell},
-				{text: 'Paste row before', onclick: cmd('mceTablePasteRowBefore'), onPostRender: postRenderCell},
-				{text: 'Paste row after', onclick: cmd('mceTablePasteRowAfter'), onPostRender: postRenderCell}
 			]
 		});
 
